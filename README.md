@@ -10,7 +10,35 @@ This API allows you to get the m3u URL of a live stream like YouTube, Twitch or 
 
 ## Prerequisites
 
-<details><summary>Building the image from the source </summary>
+<details><summary>Running with Docker</summary>
+
+```bash
+docker run -d \
+  --name=IPTV-Live-API \
+  --restart unless-stopped \
+  -p 8000:80 \
+  ghcr.io/baptiste313/iptv-live-api:main
+```
+
+</details>
+
+<details><summary>Running without Docker</summary>
+
+1. Install `yt-dlp` as a dependency
+
+```bash
+sudo apt install yt-dlp
+```
+
+2. Run via the internal PHP web server
+
+```bash
+php -S (hostname -I | awk '{print $1}'):8000
+```
+
+</details>
+
+<details><summary>Building the image from the source</summary>
 
 1. First, you need to clone the repository:
 
@@ -35,14 +63,6 @@ docker run -d \
 ```
 
 </details>
-
-```bash
-docker run -d \
-  --name=IPTV-Live-API \
-  --restart unless-stopped \
-  -p 8000:80 \
-  ghcr.io/baptiste313/iptv-live-api:main
-```
 
 ## Usage
 
