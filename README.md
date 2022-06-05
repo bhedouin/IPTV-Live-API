@@ -1,4 +1,4 @@
-[![Contributors](https://img.shields.io/github/contributors/baptiste313/IPTV-Live-API.svg?style=for-the-badge)](https://github.com/baptiste313/IPTV-Live-API/graphs/contributors) [![Forks](https://img.shields.io/github/forks/baptiste313/IPTV-Live-API.svg?style=for-the-badge)](https://github.com/baptiste313/IPTV-Live-API/network/members) [![Stargazers](https://img.shields.io/github/stars/baptiste313/IPTV-Live-API.svg?style=for-the-badge)](https://github.com/baptiste313/IPTV-Live-API/stargazers) [![Issues](https://img.shields.io/github/issues/baptiste313/IPTV-Live-API.svg?style=for-the-badge)](https://github.com/baptiste313/IPTV-Live-API/issues) [![Apache License 2.0](https://img.shields.io/github/license/baptiste313/IPTV-Live-API.svg?style=for-the-badge)](https://github.com/baptiste313/IPTV-Live-API/blob/master/LICENSE) [![Docker Image CI](https://img.shields.io/github/workflow/status/baptiste313/iptv-live-api/Docker%20Image%20CI?style=for-the-badge)](https://github.com/baptiste313/IPTV-Live-API/actions/workflows/docker-publish.yml)
+[![Contributors](https://img.shields.io/github/contributors/baptiste313/IPTV-Live-API.svg?style=for-the-badge)](https://github.com/baptiste313/IPTV-Live-API/graphs/contributors) [![Forks](https://img.shields.io/github/forks/baptiste313/IPTV-Live-API.svg?style=for-the-badge)](https://github.com/baptiste313/IPTV-Live-API/network/members) [![Stargazers](https://img.shields.io/github/stars/baptiste313/IPTV-Live-API.svg?style=for-the-badge)](https://github.com/baptiste313/IPTV-Live-API/stargazers) [![Issues](https://img.shields.io/github/issues/baptiste313/IPTV-Live-API.svg?style=for-the-badge)](https://github.com/baptiste313/IPTV-Live-API/issues) [![Apache License 2.0](https://img.shields.io/github/license/baptiste313/IPTV-Live-API.svg?style=for-the-badge)](https://github.com/baptiste313/IPTV-Live-API/blob/master/LICENSE) [![Docker Image CI](https://img.shields.io/github/workflow/status/baptiste313/iptv-live-api/Docker%20Image%20CI?style=for-the-badge)](https://github.com/baptiste313/IPTV-Live-API/pkgs/container/iptv-live-api)
 
 # IPTV Live API
 
@@ -6,11 +6,13 @@
 
 This API allows you to get the m3u URL of a live stream like YouTube, Twitch or Dailymotion and many others.
 
-[![Supported Sites](https://img.shields.io/badge/-Supported_Sites-brightgreen.svg?style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md)
+|[SUPPORTED SITES](https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md)|
+|---|
 
-## Prerequisites
+## Installation
 
-<details><summary>Running with Docker</summary>
+<details open>
+<summary>Deploying from Docker Image</summary>
 
 ```bash
 docker run -d \
@@ -22,37 +24,47 @@ docker run -d \
 
 </details>
 
-<details><summary>Running without Docker</summary>
+<details>
+<summary>Running without Docker</summary>
+<br>
 
-1. Install `yt-dlp` as a dependency
-
-```bash
-sudo apt install yt-dlp
-```
-
-2. Run via the internal PHP web server
-
-```bash
-php -S (hostname -I | awk '{print $1}'):8000
-```
-
-</details>
-
-<details><summary>Building the image from the source</summary>
-
-1. First, you need to clone the repository:
+1. Clone the repository
 
 ```bash
 git clone https://github.com/baptiste313/IPTV-Live-API && cd IPTV-Live-API
 ```
 
-2. To use the API with Docker, you must build an image with the Dockerfile :
+2. Installs the `yt-dlp` dependency
+
+```bash
+sudo apt install yt-dlp
+```
+
+3. Run it through the PHP web server
+
+```bash
+php -S 0.0.0.0:8000
+```
+
+</details>
+
+<details>
+<summary>Building from Source</summary>
+<br>
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/baptiste313/IPTV-Live-API && cd IPTV-Live-API
+```
+
+2. Build the Docker Image
 
 ```bash
 docker build -t iptv-live-api .
 ```
 
-3. Now you can run it and play with it:
+3. Run the Docker Image
 
 ```bash
 docker run -d \
