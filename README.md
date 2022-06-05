@@ -17,7 +17,7 @@ git clone https://github.com/baptiste313/IPTV-Live-API && cd IPTV-Live-API
 2. To use the API with Docker, you must build an image with the Dockerfile :
 
 ```bash
-docker build -t IPTV-Live-API .
+docker build -t iptv-live-api .
 ```
 
 3. Now you can run it and play with it:
@@ -27,7 +27,7 @@ docker run \
   --name=IPTV-Live-API \
   -p 8000:80 \
   --restart unless-stopped \
-  -d IPTV-Live-API
+  -d iptv-live-api
 ```
 
 ### Usage
