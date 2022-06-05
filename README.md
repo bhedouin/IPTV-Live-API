@@ -6,9 +6,12 @@
 
 This API allows you to get the m3u URL of a live stream like YouTube, Twitch or Dailymotion and many others.
 
+[![Supported Sites](https://img.shields.io/badge/-Supported_Sites-brightgreen.svg?style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md)
+
 ## Prerequisites
 
 <details><summary>Building the image from the source </summary>
+
 1. First, you need to clone the repository:
 
 ```bash
@@ -30,6 +33,7 @@ docker run -d \
   -p 8000:80 \
   iptv-live-api
 ```
+
 </details>
 
 ```bash
