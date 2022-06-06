@@ -13,6 +13,9 @@ This API allows you to get the m3u URL of a live stream like YouTube, Twitch or 
 
 <details open>
 <summary>Deploying from Docker Image</summary>
+<br>
+
+1. Run the Docker Image
 
 ```bash
 docker run -d \
@@ -20,6 +23,12 @@ docker run -d \
   --restart unless-stopped \
   -p 8000:80 \
   ghcr.io/baptiste313/iptv-live-api:main
+```
+
+2. See the logs
+
+```bash
+docker logs -f --tail 10 IPTV-Live-API
 ```
 
 </details>
@@ -72,6 +81,12 @@ docker run -d \
   --restart unless-stopped \
   -p 8000:80 \
   iptv-live-api
+```
+
+4. See the logs
+
+```bash
+docker logs -f --tail 10 IPTV-Live-API
 ```
 
 </details>
