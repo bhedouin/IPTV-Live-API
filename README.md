@@ -95,9 +95,9 @@ docker logs -f --tail 10 IPTV-Live-API
 
 To access the videos, you can enter their URLs directly into VLC or any other video streaming player like Kodi:
 
-- https://iptv.azlinux.fr/?url=https://youtube.com/c/franceinfo/live
-- https://iptv.azlinux.fr/?url=https://twitch.tv/xQc
-- https://iptv.azlinux.fr/?url=https://dailymotion.com/video/xgepjr
+- https://hedouin.eu/i.php?url=https://youtube.com/c/franceinfo/live
+- https://hedouin.eu/i.php?url=https://twitch.tv/xQc
+- https://hedouin.eu/i.php?url=https://dailymotion.com/video/xgepjr
 
 You can replace `iptv.azlinux.fr` with your IP address if you are hosting yourself.
 
